@@ -7,8 +7,8 @@
 }
 
 :root {
-  --secondary-color: #583d72;
-  --primary-color: #ffc996;
+  --secondary-color: #ffc996;
+  --primary-color: #583d72;
   --white: #ffffff;
 }
 
@@ -46,20 +46,21 @@
 }
 
 .btn {
-  background-color: var(--primary-color);
+  background-color: var(--secondary-color);
   padding: 7px 14px;
   border-radius: 5px;
   font-weight: 700;
   display: inline-block;
   transition: all 0.3s ease;
   font-size: 1rem;
-  color: var(--secondary-color);
+  color: var(--primary-color);
   text-decoration: none;
+  border: none;
 }
 
 .btn:hover {
-  background-color: var(--secondary-color);
-  color: var(--primary-color);
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
   opacity: 1;
   cursor: pointer;
 }
@@ -70,7 +71,7 @@
 }
 
 header {
-  background-color: var(--secondary-color);
+  background-color: var(--primary-color);
 }
 
 header .inner-content {
@@ -81,7 +82,7 @@ header .inner-content {
 }
 
 header a {
-  color: var(--primary-color);
+  color: var(--secondary-color);
   font-size: 1.25rem;
   text-decoration: none;
   transition: all 0.3s ease;
@@ -111,4 +112,198 @@ header .nav-links li {
 
 header .nav-links li:last-child {
   margin-right: 0;
+}
+
+/*-----------------add page----------------------*/
+
+.add-content {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 50px 0;
+}
+
+.add-content .input-wrapper input {
+  background-color: var(--primary-color);
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  color: var(--white);
+}
+
+.results {
+  padding: 0;
+  margin: 0;
+  margin-top: 20px;
+}
+
+.results li {
+  list-style: none;
+}
+
+/*---------------ResultCard----------------------*/
+.result-card {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.result-card .poster-wrapper img,
+.filler-poster {
+  width: 75px;
+  height: 113px;
+  background-color: #dbdada;
+  border-radius: 5px;
+  margin-right: 15px;
+  display: block;
+  color: transparent;
+}
+
+.result-card .info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.result-card .info .title {
+  font-size: 1.25rem;
+  color: var(--primary-color);
+  font-weight: 600;
+  margin: 0;
+}
+
+.result-card .info .release-date {
+  font-size: 1.25rem;
+  font-weight: 300;
+  color: var(--primary-color);
+  margin: 0;
+}
+
+.result-card .controls button {
+  margin-right: 10px;
+}
+
+/*-------------------watchlist-----------------*/
+
+.movie-page {
+  padding: 30px 0;
+}
+
+.movie-page .header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.movie-page .heading {
+  color: var(--primary);
+  margin: 0;
+}
+
+.movie-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 30px;
+}
+
+.movie-page .no-movies {
+  color: var(--secondary-color);
+  font-size: 2rem;
+  text-align: center;
+}
+
+.count-pill {
+  display: block;
+  background-color: var(--secondary-color);
+  padding: 5px 15px;
+  font-size: 1.125rem;
+  font-weight: 600;
+  border-radius: 999px;
+  color: var(--primary-color);
+}
+
+@media (min-width: 992px) {
+  .movie-grid {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+/*----------------------MovieCard----------------------*/
+
+.movie-card {
+  width: 100%;
+  border-radius: 5px;
+  overflow: hidden;
+  position: relative;
+  border: 0;
+  display: block;
+}
+
+.movie-card img {
+  width: 100%;
+  display: block;
+}
+
+.movie-card .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.movie-card:hover .overlay {
+  border: 3px solid var(--secondary-color);
+}
+
+/*---------------------MovieControls-----------------------*/
+
+.movie-card .inner-card-controls {
+  display: inline;
+  background-color: red;
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.8);
+  border-radius: 5px;
+  padding: 3px;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.movie-card:hover .inner-card-controls {
+  opacity: 1;
+}
+
+.ctrl-btn {
+  color: #fefefe;
+  background-color: transparent;
+  border: none;
+  transition: all 0.3s ease;
+  font-size: 1.25rem;
+  padding: 5px;
+  margin: 0;
+}
+
+.ctrl-btn:hover {
+  color: var(--secondary-color);
+  cursor: pointer;
+}
+
+/*--------------Not Found----------------*/
+.not-found {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 2rem;
+  margin-top: 10rem;
+  color: var(--primary-color);
+}
+
+.not-found a {
+  text-decoration: none;
+  cursor: pointer;
 }

@@ -4,25 +4,31 @@ import Watched from "./components/Watched";
 import Add from "./components/Add";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import "./styles.css";
+import { GlobalProvider } from "./context/GlobalState";
+import "./icons/css/all.min.css";
+import NotFound from "./components/NotFound";
 
 function App() {
   return (
-    <div className="App">
+    <GlobalProvider>
       <Router>
         <Header />
         <Switch>
           <Route exact path="/">
             <WatchList />
           </Route>
-          <Route exact path="/watched">
+          <Route path="/watched">
             <Watched />
           </Route>
-          <Route exact path="/add">
+          <Route path="/add">
             <Add />
+          </Route>
+          <Route path="/*">
+            <NotFound />
           </Route>
         </Switch>
       </Router>
-    </div>
+    </GlobalProvider>
   );
 }
 
