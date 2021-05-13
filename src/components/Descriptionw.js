@@ -6,6 +6,7 @@ const Descriptionw = () => {
   const { id } = useParams();
   const { watched } = useContext(GlobalContext);
 
+  // eslint-disable-next-line
   const answer = watched.filter((movie) => movie.id == id);
   console.log(answer);
 
