@@ -228,6 +228,28 @@ header .nav-links li:last-child {
   }
 }
 
+.card-title {
+  text-align: center;
+
+  text-decoration: none;
+}
+
+.movie-grid a {
+  color: var(--primary-color);
+  text-decoration: none;
+  font-size: 0.8rem;
+  font-weight: bold;
+  background-color: var(--secondary-color);
+  border-radius: 5px;
+  padding: 5px 10px;
+  margin-top: 0.5rem;
+}
+
+.movie-grid a:hover {
+  color: var(--secondary-color);
+  background-color: var(--primary-color);
+}
+
 /*----------------------MovieCard----------------------*/
 
 .movie-card {
@@ -306,4 +328,36 @@ header .nav-links li:last-child {
 .not-found a {
   text-decoration: none;
   cursor: pointer;
+}
+
+/*----------description-------------------*/
+
+.description {
+  margin: 3rem;
+  background-color: var(--secondary-color);
+}
+
+.desc-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.poster-img {
+  padding: 1rem;
+}
+
+.contents {
+  color: var(--primary-color);
+  line-height: 3;
+  font-weight: bold;
+  margin-right: 2rem;
+}
+
+.contents h1 {
+  font-size: 2rem;
+}
+
+.contents .overview {
+  line-height: 1.5;
 }

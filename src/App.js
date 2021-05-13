@@ -7,6 +7,8 @@ import "./styles.css";
 import { GlobalProvider } from "./context/GlobalState";
 import "./icons/css/all.min.css";
 import NotFound from "./components/NotFound";
+import Description from "./components/Description";
+import Descriptionw from "./components/Descriptionw";
 
 function App() {
   return (
@@ -22,6 +24,12 @@ function App() {
           </Route>
           <Route path="/add">
             <Add />
+          </Route>
+          <Route path="/description/:id">
+            <Description />
+          </Route>
+          <Route path="/descriptionw/:id">
+            <Descriptionw />
           </Route>
           <Route path="/*">
             <NotFound />
