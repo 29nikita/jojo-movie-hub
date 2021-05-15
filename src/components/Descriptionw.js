@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { useParams } from "react-router-dom";
 import { GlobalContext } from "../context/GlobalState";
+import Video from "./Video";
 
 const Descriptionw = () => {
   const { id } = useParams();
@@ -20,11 +21,23 @@ const Descriptionw = () => {
 
   return (
     <div className="description">
+      <div className="top-contents">
+        <h1>
+          {title} ({date.substring(0, 4)})
+        </h1>
+        <p
+          style={{
+            fontSize: "1.22rem",
+          }}
+        >
+          Release Date: {date}
+        </p>
+      </div>
       <div class="desc-container">
         <div className="poster-img">
           {picture ? (
             <img
-              src={`https://image.tmdb.org/t/p/w300${picture}`}
+              src={`https://image.tmdb.org/t/p/w400${picture}`}
               alt={title}
             />
           ) : (
@@ -32,16 +45,6 @@ const Descriptionw = () => {
           )}
         </div>
         <div className="contents">
-          <h1>
-            {title} ({date.substring(0, 4)})
-          </h1>
-          <p
-            style={{
-              fontSize: "1.22rem",
-            }}
-          >
-            Release Date: {date}
-          </p>
           <p className="overview">{overview}</p>
 
           <p className="score">
@@ -51,6 +54,7 @@ const Descriptionw = () => {
             </span>
             <span style={{ fontSize: "0.8rem" }}>/10</span>
           </p>
+          <Video key={id} id={id} />
         </div>
       </div>
     </div>

@@ -12,12 +12,6 @@
   --white: #ffffff;
 }
 
-*,
-*:before,
-*:after {
-  box-sizing: border-box;
-}
-
 /*--------------------navbar----------------------*/
 
 .container {
@@ -25,24 +19,6 @@
   padding-right: 15px;
   margin-left: auto;
   margin-right: auto;
-}
-
-@media (min-width: 768px) {
-  .container {
-    width: 100%;
-  }
-}
-
-@media (min-width: 992px) {
-  .container {
-    width: 100%;
-  }
-}
-
-@media (min-width: 1200px) {
-  .container {
-    width: 100%;
-  }
 }
 
 .btn {
@@ -337,6 +313,12 @@ header .nav-links li:last-child {
   background-color: var(--secondary-color);
 }
 
+.description h1 {
+  color: var(--primary-color);
+  text-align: center;
+  padding-top: 1rem;
+}
+
 .desc-container {
   display: flex;
   flex-direction: row;
@@ -352,12 +334,38 @@ header .nav-links li:last-child {
   line-height: 3;
   font-weight: bold;
   margin-right: 2rem;
-}
-
-.contents h1 {
-  font-size: 2rem;
+  margin-top: 3rem;
 }
 
 .contents .overview {
-  line-height: 1.5;
+  line-height: 1.8;
+}
+
+.top-contents p {
+  text-align: center;
+  color: var(--primary-color);
+  font-weight: bold;
+}
+
+/*----------------------------video----------------------*/
+#video {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#video button {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  padding: 10px 5px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  margin: 1rem 0;
+  font-weight: bold;
+}
+
+#video button:hover {
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
 }

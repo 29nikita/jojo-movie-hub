@@ -8,19 +8,22 @@ const Header = () => {
           <div className="brand">
             <Link to="/">jojoMovieHub</Link>
           </div>
-          <ul className="nav-links">
-            <li>
-              <Link to="/">Watchlist</Link>
-            </li>
-            <li>
-              <Link to="/watched">Watched</Link>
-            </li>
-            <li>
-              <Link to="/add" className="btn">
-                + Add
-              </Link>
-            </li>
-          </ul>
+
+          <div className="responsive">
+            <ul className="nav-links">
+              <li>
+                <Link to="/">Watchlist</Link>
+              </li>
+              <li>
+                <Link to="/watched">Watched</Link>
+              </li>
+              <li>
+                <Link to="/add" className="btn">
+                  + Add
+                </Link>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </header>
